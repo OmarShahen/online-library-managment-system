@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <h1 style="text-align:center;padding-top: 60px;padding-bottom: 60px;">
+                Welcome To Express & Firebase Library Managment System
+            </h1>
+        </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                        <div class="col-sm-12 col-md-6">
+
+                            <div class="card">
+                                <div class="card-header">
+
+                                </div>
+                                <div class="card-body">
+                                    login as <strong class="text-primary">Admin</strong>
+
+                                    <div style="display: none;" id="adminHiddenForm">
+                                        <form method="POST" action=""> 
+                                            <div class="form-group">
+                                                <label for="adminName">
+                                                    Enter Name:
+                                                </label>
+                                                <input type="text" class="form-control" required id="adminName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="adminPassword">
+                                                    Enter Password:
+                                                </label>
+                                                <input type="password" class="form-control" required id="adminPassword">
+                                            </div>
+                                            <input type="submit" class="btn btn-primary">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card-footer" style="text-align: right;">
+                                    <button href="" id="adminBtn" class="btn btn-primary btn-sm">login</button>
+                                </div>
+                            </div>
+                                                        
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+
+                            <div class="card">
+                                <div class="card-header">
+
+                                </div>
+                                <div class="card-body">
+                                    login as <strong class="text-primary">Librarian</strong>
+
+                                </div>
+                                <div class="card-footer" style="text-align: right;">
+                                    <a href="" class="btn btn-primary btn-sm">login</a>
+                                </div>
+                            </div>
+                                                        
+                        </div>
+                
+                    </div>
+            
+                </div>
+        
+            </div>
+        
+        </div>
+
+        <script>
+            document.querySelector("#adminBtn").addEventListener("click", ()=>{
+
+                document.querySelector("#adminHiddenForm").style.display = "block";
+                //document.querySelector("#adminBtn").style.display = "none";
+            });
+        </script>
+    </body>
+</html>
