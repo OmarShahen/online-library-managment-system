@@ -52,13 +52,13 @@
                                                 <label for="adminName">
                                                     Enter Name:
                                                 </label>
-                                                <input type="text" class="form-control" required id="adminName">
+                                                <input type="text" class="form-control" required id="adminName" placeholder="admin name...">
                                             </div>
                                             <div class="form-group">
                                                 <label for="adminPassword">
                                                     Enter Password:
                                                 </label>
-                                                <input type="password" class="form-control" required id="adminPassword">
+                                                <input type="password" class="form-control" required id="adminPassword" placeholder="admin password...">
                                             </div>
                                             <input type="submit" class="btn btn-primary">
                                         </form>
@@ -79,9 +79,27 @@
                                 <div class="card-body">
                                     login as <strong class="text-primary">Librarian</strong>
 
+                                    <div style="display: none;" id="librarianHiddenForm">
+                                        <form method="POST" action=""> 
+                                            <div class="form-group">
+                                                <label for="librarianName">
+                                                    Enter Name:
+                                                </label>
+                                                <input type="text" class="form-control" required id="librarianName" placeholder="librarian name...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="librarianPassword">
+                                                    Enter Password:
+                                                </label>
+                                                <input type="password" class="form-control" required id="librarianPassword" placeholder="librarian password...">
+                                            </div>
+                                            <input type="submit" class="btn btn-primary">
+                                        </form>
+                                    </div>
+
                                 </div>
                                 <div class="card-footer" style="text-align: right;">
-                                    <a href="" class="btn btn-primary btn-sm">login</a>
+                                    <button href="" class="btn btn-primary btn-sm" id="librarianBtn">login</button>
                                 </div>
                             </div>
                                                         
@@ -99,8 +117,12 @@
             document.querySelector("#adminBtn").addEventListener("click", ()=>{
 
                 document.querySelector("#adminHiddenForm").style.display = "block";
-                //document.querySelector("#adminBtn").style.display = "none";
             });
+
+            document.querySelector("#librarianBtn").addEventListener("click", ()=>{
+                document.querySelector("#librarianHiddenForm").style.display = "block";
+            });
+
         </script>
     </body>
 </html>
