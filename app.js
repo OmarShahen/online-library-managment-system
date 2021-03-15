@@ -1,12 +1,12 @@
-let express = require("express");
-let app = express();
+const express = require("express");
+const app = express();
+const path = require("path");
 
-app.set("view engine", "pug");
-app.set("views", "./views");
+
 
 app.get("/", (request, respond)=>{
 
-    
+    respond.sendFile(path.join(__dirname + "/views/home.html"));
 });
 
 app.listen(3000);

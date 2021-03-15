@@ -19,9 +19,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
-    body{
-        padding: 0;
-        margin: 0;
+    .card-footer{
+        text-align: right;
     }
 </style>
 </head>
@@ -65,6 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer" style="text-align: right;">
+                                    <button class="btn btn-primary btn-sm" id="adminHideBtn" style="display: none;">hide</button>
                                     <button href="" id="adminBtn" class="btn btn-primary btn-sm">login</button>
                                 </div>
                             </div>
@@ -98,8 +98,9 @@
                                     </div>
 
                                 </div>
-                                <div class="card-footer" style="text-align: right;">
+                                <div class="card-footer">
                                     <button href="" class="btn btn-primary btn-sm" id="librarianBtn">login</button>
+                                    <button class="btn btn-primary btn-sm" id="librarianHideBtn" style="display: none;">hide</button>
                                 </div>
                             </div>
                                                         
@@ -117,10 +118,29 @@
             document.querySelector("#adminBtn").addEventListener("click", ()=>{
 
                 document.querySelector("#adminHiddenForm").style.display = "block";
+                document.querySelector("#adminBtn").style.display = "none";
+                document.querySelector("#adminHideBtn").style.display = "block";
             });
+
+            document.querySelector("#adminHideBtn").addEventListener("click", ()=>{
+                document.querySelector("#adminHiddenForm").style.display = "none";
+                document.querySelector("#adminBtn").style.display = "block";
+                document.querySelector("#adminHideBtn").style.display = "none";
+
+            });
+
 
             document.querySelector("#librarianBtn").addEventListener("click", ()=>{
                 document.querySelector("#librarianHiddenForm").style.display = "block";
+                document.querySelector("#librarianBtn").style.display = "none";
+                document.querySelector("#librarianHideBtn").style.display = "block";
+
+            });
+
+            document.querySelector("#librarianHideBtn").addEventListener("click", ()=>{
+                document.querySelector("#librarianHiddenForm").style.display = "none";
+                document.querySelector("#librarianBtn").style.display = "block";
+                document.querySelector("#librarianHideBtn").style.display = "none";
             });
 
         </script>
